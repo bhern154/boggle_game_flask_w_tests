@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rowdies&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 800;
+    background-color: #7B66FF;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+#board{
+    background-color: #7B66FF;
+    padding: 20px 0 20px 0;
+}
+
+#boardWrapper{
+    background-color: #5FBDFF;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+    grid-auto-flow: column;
+
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.letterWrapper{
+    background-color: #FFC47E;
+    
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    border-radius: 10px;
+}
+
+.letterBlock{
+    font-size: 3rem;
+    background-color: #FFF78A;
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+
+    margin: auto;
+}
+
+#guessForm{
+    display: flex;
+    width: 540px;
+    margin: auto;
+
+    background-color: #5FBDFF;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#inputGuess{
+    width: 80%;
+    border: none;
+    background-color: #FFF78A;
+    height: 60px;
+    padding-left: 15px;
+}
+
+#inputGuess::placeholder{
+    font-family: 'Space Mono', monospace;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+input[type="text"]{
+    font-family: 'Space Mono', monospace;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#submitGuess{
+    width: 20%;
+    border: none;
+    background-color: #FFC47E;
+    font-family: 'Space Mono', monospace;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 5px;
+}
+
+#guessResponses{
+    display: flex;
+    width: 560px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.ok-response{
+    background-color: #2adf79;
+    width: 100%;
+    padding: 15px 30px 15px 30px;
+    margin: 0px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.not-word-response{
+    background-color: #ff814b;
+    width: 100%;
+    padding: 15px 30px 15px 30px;
+    margin: 0px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.not-on-board-response{
+    background-color: #5FBDFF;
+    width: 100%;
+    padding: 15px 30px 15px 30px;
+    margin: 0px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.scoreWrapper{
+    display: flex;
+    width: 560px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.score{
+    width: 50%;
+    padding-left: 10px;
+    margin: 0px;
+    font-size: 1.5rem;
+    color:white;
+}
+
+.timer{
+    width: 50%;
+    padding-left: 10px;
+    margin: 0px;
+    font-size: 1.5rem;
+    color:white;
+}

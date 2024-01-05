@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Boggle Game</title>
+</head>
+<body>
+    <section id="boggle">
+        <h1 class="title">Boggle Game</h1>
+
+        <div class="scoreWrapper">
+            <p class="score">Score: 0</p>
+            <p class="timer">Timer: 60 sec</p>
+        </div>
+
+        <div id="game">
+
+            <div id="board">
+                <div id="boardWrapper">
+                {% for x in range(board|length) %}
+                    {% for y in range(board[0]|length) %}
+                    <div class="letterWrapper">
+                        <div class="letterBlock">
+                            {{ board[x][y] }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endfor %}
+                </div>
+            </div>
+
+            <div>
+                <form id="guessForm" action="">
+                    <input id="inputGuess" type="text" name="guess" placeholder="ENTER YOUR GUESS"><br>
+                    <button id="submitGuess" form="guessForm" type="submit">SUBMIT</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div id="guessResponses">
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="../static/script.js"></script>
+    <script>
+        let game = new BoggleGame("boggle");
+    </script>
+</body>
+</html>
